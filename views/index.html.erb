@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+    <title>Political Zoo</title>
+  </head>
+  <body>
+    <div class='navbar'>
+      <div id="logo">
+        <img src="donkey.png" />
+        POLITICAL ZOO
+        <img src='images/#{donkey.png}'/>
+        <img src="/elephant.png" />
+        <div id="navbar-links-left">
+          <ul>
+            <li><a href="/">NEW</a></li>
+            <li>|</li>
+            <li><a href="">COMMENTS</a></li>
+            <li>|</li>
+            <li><a href="">SHOW</a></li>
+            <li>|</li>
+            <li><a href="">ASK</a></li>
+            <li>|</li>
+            <li><a href="">JOBS</a></li>
+            <li>|</li>
+            <li><a href="">SUBMIT</a></li>
+          </ul>
+        </div>
+        <div id="navbar-links-left">
+          <ul>
+            <li><a href="/">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="topics">
+      <% Topics.all.order.each do |topic| %>
+      <ul>
+        <li><%= topic.number.count %><img src="" /><a href="<%= topic.title %>"><%= topic.links %></a></li>
+        <li><div class="secondary"><%= topic.email %></a> at <%= story.created_at %></div></li>
+      </ul>
+     <% end %>
+    </div>
+  </body>
+</html>
