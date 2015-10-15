@@ -17,7 +17,7 @@
       </span>
       <span id="navbar-links-left">
         <ul>
-          <span class='color-lines2'><li><a href="/new">New</a></li></span>
+          <span class='color-lines2'><li><a href="/">Home</a></li></span>
           <span class='color-lines'><li>|</li></span>
           <span class='color-lines2'><li><a href="">Comments</a></li></span>
           <span class='color-lines'><li>|</li></span>
@@ -40,12 +40,7 @@
   </header>
 
   <div class="topics">
-  <% Topics.all.each do |topic| %>
-    <ul>
-      <li><span class='number'><%= topic.number %></span><span class='upcount'><img src="/images/upcount.png" /></span><a href="<%= topic.title %>"><%= topic.links %></a></li>
-      <li><div class="secondary">via <%= topic.email %></a> </div></li>
-    </ul>
-  <% end %>
+    form will go here
   </div>
 </body>
 </html>

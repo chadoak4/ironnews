@@ -5,19 +5,22 @@ require 'active_record'
 
 ActiveRecord::Base.establish_connection(
   adapter: "sqlite3",
-  database: File.dirname(__FILE__) + "/ironnews.db"
+  database: File.dirname(__FILE__) + "/ironnews.sqlite3"
 )
 
 require 'sinatra'
 require 'sinatra/reloader' if development?
-set :port, 3000
+
 
 require 'erb'
 Tilt.register Tilt::ERBTemplate, 'html.erb'
 
-class Topics < ActiveRecord::Base
+require_relative 'topic'
 
-end
 get '/' do
   erb :index
+end
+
+get '/new' do
+  erb :new
 end
