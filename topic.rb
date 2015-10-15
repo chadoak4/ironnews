@@ -1,4 +1,4 @@
-class Topic < ActiveRecord::Base
+class Topics < ActiveRecord::Base
 
 
   def count
