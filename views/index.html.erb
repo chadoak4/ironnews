@@ -40,9 +40,9 @@
   </header>
 
   <div class="topics">
-  <% Topics.all.each do |topic| %>
+  <% Topic.all.each.with_index do |topic, number| %>
     <ul>
-      <li><span class='number'></span><span class='upcount'><img src="/images/upcount.png" /></span><a href="<%= topic.title %>"><%= topic.links %></a></li>
+      <li><span class='number'><%= number + 1 %></span><span class='upcount'><img src="/images/upcount.png" /></span><a href="<%= topic.links %>"><%= topic.title %></a></li>
       <li><div class="secondary">via <%= topic.email %></a> </div></li>
     </ul>
   <% end %>

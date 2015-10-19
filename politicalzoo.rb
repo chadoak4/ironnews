@@ -24,3 +24,13 @@ end
 get '/new' do
   erb :new
 end
+
+post '/save' do
+
+  title = params["title"]
+  links = params["links"]
+  email = params["email"]
+  new_entry = Topic.create(title: title, links: links, email: email)
+
+  redirect to '/'
+end

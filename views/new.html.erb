@@ -17,7 +17,7 @@
       </span>
       <span id="navbar-links-left">
         <ul>
-          <span class='color-lines2'><li><a href="/">Home</a></li></span>
+          <span class='color-lines2'><li><a href="/new">New</a></li></span>
           <span class='color-lines'><li>|</li></span>
           <span class='color-lines2'><li><a href="">Comments</a></li></span>
           <span class='color-lines'><li>|</li></span>
@@ -38,9 +38,14 @@
       </div>
     </nav>
   </header>
-
-  <div class="topics">
-    form will go here
-  </div>
-</body>
+  <body>
+    <form method="POST" action="/save">
+      <ul>
+        Title:<input name="title"/>
+        Link: <input name="links"/>
+        Email: <input name="email"/>
+      </ul>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>

@@ -1,9 +1,4 @@
-class Topics < ActiveRecord::Base
-
-
-  def count
-   render text:  Topic.count.to_s
-
-  end
+class Topic < ActiveRecord::Base
+  validates :title, :links, :email, presence: true
 
 end
